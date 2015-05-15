@@ -5,13 +5,13 @@ Docker container usefull to setup a simple, effective ambassador
 ## Usage Example
 
 ```
- /-------------------------\      /-------------------------\      /-------------------------\
- |  Provider               |      | Ambassador              |      | Consumer                |
- |  (redis)                |      | (flask_amba)            |      | (flask)                 |
- |  Exposes port: 6379     |<---->| Exposes port: 6379      |<---->| Exposes port: 5000:5000 |
- |  IP address may change  |      | IP address don't change |      | Connect to port 6379 of |
- |and can be on remote host|      |                         |      |  redis host             |
- \-------------------------/      \-------------------------/      \-------------------------/                                
+/-------------------------\    /-------------------------\    /-------------------------\
+|  Provider               |    | Ambassador              |    | Consumer                |
+|  (redis)                |    | (flask_amba)            |    | (flask)                 |
+|  Exposes port: 6379     |<-->| Exposes port: 6379      |<-->| Exposes port: 5000:5000 |
+|  IP address may change  |    | IP address don't change |    | Connect to port 6379 of |
+|and can be on remote host|    |                         |    |  redis host             |
+\-------------------------/    \-------------------------/    \-------------------------/                                
 ```
 
 ### Initial Setup
